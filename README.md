@@ -14,6 +14,9 @@ Excercise for Rodo mobile.
 ## Home Screen
 <img src="https://github.com/thakurshadman/Rodo_exercise/blob/main/Screenshot0.jpg" alt="Home Screen" width="200"/>
 
+## Blank Mock Screen
+<img src="https://github.com/thakurshadman/Rodo_exercise/blob/main/Screenshot2.jpg" alt="Car Type Screen" width="200"/>
+
 ## Car Type Screen
 <img src="https://github.com/thakurshadman/Rodo_exercise/blob/main/Screenshot1.jpg" alt="Car Type Screen" width="200"/>
 
