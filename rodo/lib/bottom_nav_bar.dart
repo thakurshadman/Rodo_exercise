@@ -20,7 +20,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       controller: _controller,
       navBarStyle: NavBarStyle.style6,
       screens: [
-        Home_Body(),
+        HomeBody(),
         EmptyScreen(),
         EmptyScreen(),
         EmptyScreen(),

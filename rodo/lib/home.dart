@@ -11,12 +11,12 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
-  final screens = [Home_Body(), EmptyScreen(), EmptyScreen(), EmptyScreen(),EmptyScreen()];
+  final screens = [HomeBody(), EmptyScreen(), EmptyScreen(), EmptyScreen(),EmptyScreen()];
   int index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Home_Body(),
+      body: HomeBody(),
       bottomNavigationBar: BottomNavBar(),
     );
   }

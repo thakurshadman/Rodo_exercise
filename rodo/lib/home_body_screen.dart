@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:rodo/car_types_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
-
-class Home_Body extends StatefulWidget {
-  const Home_Body({Key? key}) : super(key: key);
+import 'search_function.dart';
+class HomeBody extends StatefulWidget {
+  const HomeBody({Key? key}) : super(key: key);
 
   @override
-  State<Home_Body> createState() => _Home_BodyState();
+  State<HomeBody> createState() => _HomeBodyState();
 }
 
-class _Home_BodyState extends State<Home_Body> {
+
+class _HomeBodyState extends State<HomeBody> {
+  final _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     MediaQueryData screenInfo = MediaQuery.of(context);
@@ -31,6 +33,7 @@ class _Home_BodyState extends State<Home_Body> {
                 Container( //-------------------------------------------------SearchBar
                   margin: EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
+                    controller: _controller,
                     decoration: InputDecoration(
                       hintText: 'SEARCH MAKE AND MODEL',
                       hintStyle: TextStyle(
@@ -81,7 +84,9 @@ class _Home_BodyState extends State<Home_Body> {
                       side: BorderSide(
                           width: 3.0, color: Color.fromARGB(255, 4, 227, 107)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      readExerciseDatasetJSON(_controller.text);
+                    },
                     child: Text(
                       'SEE DEALS OF THE DAY',
                       style: TextStyle(

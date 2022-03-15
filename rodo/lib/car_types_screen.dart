@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 
 class TypesOfCarGrid extends StatelessWidget {
   const TypesOfCarGrid({Key? key}) : super(key: key);
@@ -45,7 +45,7 @@ List<CarTile> typesOfCar() {
   return carTileList;
 }
 
-class CarTile extends StatelessWidget {
+class CarTile extends StatelessWidget { //------------------------------------------------Tile UI component for CarType Grid View
   String carType = '';
   String assetPath = "assets/cars/";
 
