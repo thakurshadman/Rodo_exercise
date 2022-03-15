@@ -12,7 +12,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   PersistentTabController _controller =
-  PersistentTabController(initialIndex: 0);
+      PersistentTabController(initialIndex: 0);
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
@@ -84,4 +84,5 @@ class _BottomNavBarState extends State<BottomNavBar> {
             )),
       ],
     );
-  }}
+  }
+}

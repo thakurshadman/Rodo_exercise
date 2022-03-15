@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TypesOfCarGrid extends StatelessWidget {
   const TypesOfCarGrid({Key? key}) : super(key: key);
 
@@ -10,7 +9,10 @@ class TypesOfCarGrid extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 26, 47, 53),
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('Vehicle Type', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900),),
+          title: Text(
+            'Vehicle Type',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900),
+          ),
           centerTitle: true,
           foregroundColor: Colors.black,
         ),
@@ -45,7 +47,8 @@ List<CarTile> typesOfCar() {
   return carTileList;
 }
 
-class CarTile extends StatelessWidget { //------------------------------------------------Tile UI component for CarType Grid View
+class CarTile extends StatelessWidget {
+  //------------------------------------------------Tile UI component for CarType Grid View
   String carType = '';
   String assetPath = "assets/cars/";
 
@@ -57,14 +60,16 @@ class CarTile extends StatelessWidget { //--------------------------------------
   Widget build(BuildContext context) {
     return InkWell(
       child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(assetPath),
-        Text(
-          carType,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-      ],
-    ), onTap: (){},  );
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(assetPath),
+          Text(
+            carType,
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+      onTap: () {},
+    );
   }
 }

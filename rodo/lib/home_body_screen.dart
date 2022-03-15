@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:rodo/car_types_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'search_function.dart';
+
 class HomeBody extends StatefulWidget {
   const HomeBody({Key? key}) : super(key: key);
 
   @override
   State<HomeBody> createState() => _HomeBodyState();
 }
-
 
 class _HomeBodyState extends State<HomeBody> {
   final _controller = TextEditingController();
@@ -25,12 +25,16 @@ class _HomeBodyState extends State<HomeBody> {
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset( //--------------------------------------------------Logo
+                Image.asset(
+                  //--------------------------------------------------Logo
                   "assets/logo/logo.png",
                   width: 200,
                 ),
-                SizedBox(height: 45,),
-                Container( //-------------------------------------------------SearchBar
+                SizedBox(
+                  height: 45,
+                ),
+                Container(
+                  //-------------------------------------------------SearchBar
                   margin: EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
                     controller: _controller,
@@ -51,7 +55,8 @@ class _HomeBodyState extends State<HomeBody> {
             ),
             Column(
               children: [
-                OutlinedButton(//----------------------------------------------------Search by Type Button
+                OutlinedButton(
+                    //----------------------------------------------------Search by Type Button
                     style: OutlinedButton.styleFrom(
                       fixedSize: Size(screenInfo.size.width - 40, 48),
                       shape: RoundedRectangleBorder(
@@ -64,7 +69,8 @@ class _HomeBodyState extends State<HomeBody> {
                       pushNewScreen(
                         context,
                         screen: TypesOfCarGrid(),
-                        pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                        pageTransitionAnimation:
+                            PageTransitionAnimation.cupertino,
                       );
                     },
                     child: Text(
@@ -74,8 +80,11 @@ class _HomeBodyState extends State<HomeBody> {
                         fontSize: 14,
                       ),
                     )),
-                SizedBox(height: 20,),
-                OutlinedButton( //-------------------------------------------------Search deals of the day button
+                SizedBox(
+                  height: 20,
+                ),
+                OutlinedButton(
+                    //-------------------------------------------------Search deals of the day button
                     style: OutlinedButton.styleFrom(
                       fixedSize: Size(screenInfo.size.width - 40, 48),
                       shape: RoundedRectangleBorder(

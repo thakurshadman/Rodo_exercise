@@ -3,17 +3,11 @@ import 'home.dart';
 import 'search_function.dart';
 import 'package:flutter/services.dart';
 
-
-
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+      overlays: [SystemUiOverlay.bottom]);
   runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Home()
-      ),
+    MaterialApp(debugShowCheckedModeBanner: false, home: Home()),
   );
 }
-
